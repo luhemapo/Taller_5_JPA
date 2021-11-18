@@ -15,17 +15,19 @@ URL del video:
 
 # Funcionalidad a alto nivel: 
 
-Modelo de página web con base de datos alojada en PostgreSQL donde se puede visualizar, hacer consultas y editar los datos almacenados de manera conveniente. Las funciones principales son:
+Modelo de página web con base de datos alojada en PostgreSQL donde se puede visualizar, hacer consultas y editar los datos almacenados de manera conveniente. 
 
-Crear un usuario
+Las funciones principales son:
 
-Actualizar usuarios
+-   Crear un usuario
 
-Crear mascotas
+-   Actualizar usuarios
 
-Actualizar mascotas
+-   Crear mascotas
 
-Crear casos
+-   Actualizar mascotas
 
-Crear visita veterinaria
+-   Crear casos
+
+-   Crear visita veterinaria
 
