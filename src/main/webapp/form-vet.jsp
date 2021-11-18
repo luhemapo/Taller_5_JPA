@@ -6,7 +6,6 @@
     <title>Form Vet</title>
 </head>
 <body>
-
 <form action="./create-vet">
     <h1>Base de datos Ciudadanos de 4 Patas! :D</h1>
     <div>
