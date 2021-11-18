@@ -19,15 +19,15 @@ Modelo de página web con base de datos alojada en PostgreSQL donde se puede vis
 
 Las funciones principales son:
 
--   Crear un usuario
+-   Crear usuarios.
 
--   Actualizar usuarios
+-   Actualizar usuarios.
 
--   Crear mascotas
+-   Crear mascotas.
 
--   Actualizar mascotas
+-   Actualizar mascotas.
 
--   Crear casos
+-   Crear casos.
 
--   Crear visita veterinaria
+-   Crear visita veterinaria.
 
