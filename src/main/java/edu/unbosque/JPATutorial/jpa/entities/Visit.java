@@ -42,12 +42,13 @@ public class Visit {
         this.vet_id = vet_id;
     }
 
-    public Visit(Integer visit_id, String created_at, String type, String description, String pet_id) {
+    public Visit(Integer visit_id, String created_at, String type, String description, String pet_id, String vet_id) {
         this.visit_id = visit_id;
         this.created_at = created_at;
         this.description = description;
         this.type = type;
         this.pet_id = pet_id;
+        this.vet_id = vet_id;
     }
 
     public Integer getVisit_id() {

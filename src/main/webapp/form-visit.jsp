@@ -9,7 +9,7 @@
 
 <form action="./create-visit">
         <h1>Create Visit! :D</h1>
-    <div> Vet: <input type="text" id="username" name="username" value ="<%= request.getParameter("vet_id") %>" readonly></div>
+    <div> Vet: <input type="text" id="vet_id" name="vet_id" value ="<%= request.getParameter("vet_id") %>" readonly></div>
     <div> Pet Id: <input type="text" id="pet_id" name="pet_id" value ="<%= request.getParameter("pet_id") %>" readonly></div>
 
     <div>

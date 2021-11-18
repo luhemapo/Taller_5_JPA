@@ -77,6 +77,23 @@
     </tbody>
 </table>
 
+<h3>Visits</h3>
+
+<table id="visitTbl">
+    <thead>
+    <tr>
+        <th>Visit Id</th>
+        <th>Created Date</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Vet Id</th>
+        <th>Pet Id</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
 
 </form>
 <br>
@@ -151,6 +168,8 @@
     printTable(elementId = 'vetTbl', servlet = 'list-owners', columns = ['person_id','username', 'name', 'address', 'neighborhood'],actions = ['update-owner','form-pet']);
     printTable(elementId = 'petTbl', servlet = 'list-pets', columns = ['pet_id','microchip', 'name', 'race', 'species', 'size', 'sex', 'picture', 'person_id'],actions = ['update-pet','form-petcase']);
     printTable(elementId = 'caseTbl', servlet = 'list-petcases', columns = ['case_id','created_at', 'type', 'description', 'pet_id']);
+    // Printing Visits
+    printTable(elementId = 'visitTbl', servlet = 'list-visit', columns = ['visit_id', 'created_at', 'type', 'description', 'vet_id', 'pet_id']);
 
 </script>
 

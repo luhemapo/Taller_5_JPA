@@ -36,6 +36,24 @@
     </tbody>
 </table>
 
+
+<h3>Visits</h3>
+
+<table id="visitTbl">
+    <thead>
+    <tr>
+        <th>Visit Id</th>
+        <th>Created Date</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Vet Id</th>
+        <th>Pet Id</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
 </form>
 <br>
 <button onclick="location.href='./index.jsp';">Back</button>
@@ -88,5 +106,8 @@
     }
     // Printing vets
     printTable(elementId = 'vetTbl', servlet = 'list-vets', columns = ['vet_id','username', 'name', 'address', 'neighborhood'],actions = ['update-vet', 'list-pet']);
+    // Printing Visits
+    printTable(elementId = 'visitTbl', servlet = 'list-visit', columns = ['visit_id', 'created_at', 'type', 'description', 'vet_id', 'pet_id']);
+
 </script>
 
