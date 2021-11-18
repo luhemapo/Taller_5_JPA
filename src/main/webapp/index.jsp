@@ -38,6 +38,22 @@
         <button onclick="location.href='./list-owner.jsp';">Show Owners</button>
         <button onclick="location.href='./list-official.jsp';">Show Officials</button>
 
+        <h3>Visits</h3>
+
+        <table id="visitTbl">
+            <thead>
+            <tr>
+                <th>Visit Id</th>
+                <th>Created Date</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Vet Id</th>
+                <th>Pet Id</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
 
         <script>
 
@@ -96,6 +112,8 @@
             // Printing users
             printTable(elementId = 'usersappTbl', servlet = 'list-usersapp', columns = ['username', 'email', 'role']);
 
+            // Printing Visits
+            printTable(elementId = 'visitTbl', servlet = 'list-visit', columns = ['visit_id', 'created_at', 'type', 'description', 'vet_id', 'pet_id']);
 
 
         </script>
