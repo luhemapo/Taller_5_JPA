@@ -11,7 +11,7 @@ URL Github(proyecto): https://github.com/luhemapo/PetsDB.git
 
 URL Github(Base de datos): https://github.com/luhemapo/Taller_5_JPA.git
 
-URL del video:
+URL del video: https://youtu.be/WaEMSN5EaAU
 
 # Funcionalidad a alto nivel: 
 
