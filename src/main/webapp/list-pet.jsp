@@ -19,7 +19,7 @@
 
 <h3>Pets</h3>
 
-<input type="text" id="username" name="username" value ="<%= request.getParameter("username") %>">
+<input type="text" id="vet_id" name="vet_id" hidden value ="<%= request.getParameter("vet_id") %>">
 
 <table id="petTbl">
     <thead>
@@ -51,6 +51,7 @@
     function printTable(elementId, servlet, columns, actions = []) {
 
         var xhr = new XMLHttpRequest();
+        var vet_id = document.getElementById("vet_id").value;
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                 var data = JSON.parse(xhr.responseText);
@@ -68,9 +69,9 @@
                     if (actions.includes('form-visit')) {
                         var cell = newRow.insertCell();
                         var action = document.createElement('button');
-                        var username = document.getElementById("username").value();
-                        action.setAttribute('onclick', 'location.href="./form-visit.jsp?pet_id=' + d['pet_id']  + '&username=' + username  + '";');
-                        var text = document.createTextNode('Create Visit');
+
+                        action.setAttribute('onclick', 'location.href="./form-visit.jsp?pet_id=' + d['pet_id']  + '&vet_id=' + vet_id  + '";');
+                        var text = document.createTextNode('Create Appointment');
                         action.appendChild(text);
                         cell.appendChild(action);
                     }

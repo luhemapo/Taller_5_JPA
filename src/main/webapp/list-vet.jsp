@@ -23,6 +23,7 @@
 <table id="vetTbl">
     <thead>
     <tr>
+        <th>Vet Id</th>
         <th>Username</th>
         <th>Name</th>
         <th>Address</th>
@@ -72,8 +73,8 @@
                     if (actions.includes('list-pet')) {
                         var cell = newRow.insertCell();
                         var action = document.createElement('button');
-                        action.setAttribute('onclick', 'location.href="./list-pet.jsp?username=' + d['username']  + '";');
-                        var text = document.createTextNode('SHow pets');
+                        action.setAttribute('onclick', 'location.href="./list-pet.jsp?vet_id=' + d['vet_id']  + '";');
+                        var text = document.createTextNode('Appointment');
                         action.appendChild(text);
                         cell.appendChild(action);
                     }
@@ -86,6 +87,6 @@
 
     }
     // Printing vets
-    printTable(elementId = 'vetTbl', servlet = 'list-vets', columns = ['username', 'name', 'address', 'neighborhood'],actions = ['update-vet', 'list-pet']);
+    printTable(elementId = 'vetTbl', servlet = 'list-vets', columns = ['vet_id','username', 'name', 'address', 'neighborhood'],actions = ['update-vet', 'list-pet']);
 </script>
 
