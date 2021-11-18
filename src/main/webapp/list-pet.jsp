@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>List Vets</title>
+    <title>List Pets</title>
 </head>
 
 <style>
@@ -15,19 +15,25 @@
 <body>
 
 <br>
-<h1>All Vets! :D</h1>
+<h1>Create Visit! :D</h1>
 
-<h3>Vets</h3>
+<h3>Pets</h3>
 
+<input type="text" id="username" name="username" value ="<%= request.getParameter("username") %>">
 
-<table id="vetTbl">
+<table id="petTbl">
     <thead>
     <tr>
-        <th>Username</th>
+        <th>Pet Id</th>
+        <th>Microchip</th>
         <th>Name</th>
-        <th>Address</th>
-        <th >Neighborhood </th>
-        <th colspan="2">Action </th>
+        <th>Race</th>
+        <th>Species</th>
+        <th>Size</th>
+        <th>Sex</th>
+        <th>Picture</th>
+        <th>Person Id</th>
+        <th>Action </th>
 
     </tr>
     </thead>
@@ -37,7 +43,7 @@
 
 </form>
 <br>
-<button onclick="location.href='./index.jsp';">Back</button>
+<button onclick="location.href='./list-vet.jsp';">Back</button>
 </body>
 </html>
 
@@ -59,21 +65,12 @@
                         cell.appendChild(text);
                     });
 
-                    if (actions.includes('update-vet')) {
+                    if (actions.includes('form-visit')) {
                         var cell = newRow.insertCell();
                         var action = document.createElement('button');
-                        action.setAttribute('onclick', 'location.href="./update-vet.jsp?username=' + d['username'] + '&name=' + d['name'] + '' +
-                            '&address=' + d['address'] + '&neighborhood=' + d['neighborhood'] + '";');
-                        var text = document.createTextNode('Update Vet');
-                        action.appendChild(text);
-                        cell.appendChild(action);
-                    }
-
-                    if (actions.includes('list-pet')) {
-                        var cell = newRow.insertCell();
-                        var action = document.createElement('button');
-                        action.setAttribute('onclick', 'location.href="./list-pet.jsp?username=' + d['username']  + '";');
-                        var text = document.createTextNode('SHow pets');
+                        var username = document.getElementById("username").value();
+                        action.setAttribute('onclick', 'location.href="./form-visit.jsp?pet_id=' + d['pet_id']  + '&username=' + username  + '";');
+                        var text = document.createTextNode('Create Visit');
                         action.appendChild(text);
                         cell.appendChild(action);
                     }
@@ -86,6 +83,7 @@
 
     }
     // Printing vets
-    printTable(elementId = 'vetTbl', servlet = 'list-vets', columns = ['username', 'name', 'address', 'neighborhood'],actions = ['update-vet', 'list-pet']);
+    printTable(elementId = 'petTbl', servlet = 'list-pets', columns = ['pet_id','microchip', 'name', 'race', 'species', 'size', 'sex', 'picture', 'person_id'],actions = ['form-visit']);
+
 </script>
 

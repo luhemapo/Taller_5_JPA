@@ -9,6 +9,9 @@
 
 <form action="./create-pet">
         <h1>Base de datos Ciudadanos de 4 Patas! :D</h1>
+    <div>
+        Pet id: <input type="text" id="pet_id" name="pet_id" >
+    </div>
         <div>
             Microchip: <input type="text" id="microchip" name="microchip" >
         </div>
@@ -39,6 +42,9 @@
             <option value="Female">Female</option>
             <option value="Male">Male</option>
         </select>
+    </div>
+    <div>
+        Picture:  <input type="text" id="picture" name="picture" >
     </div>
     <div> Person Id: <input type="text" id="person_id" name="person_id" value ="<%= request.getParameter("person_id") %>" readonly></div>
 

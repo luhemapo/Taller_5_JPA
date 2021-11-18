@@ -1,19 +1,19 @@
 package edu.unbosque.JPATutorial.jpa.repositories;
 
-import edu.unbosque.JPATutorial.jpa.entities.Vet;
+import edu.unbosque.JPATutorial.jpa.entities.Pet;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface PetRepository {
 
-    Optional<Vet> findByUsername(String username);
+    Optional<Pet> findById(String username);
 
-    List<Vet> findAll();
+    List<Pet> findAll();
 
-    Optional<Vet> save(Vet vet);
+    Optional<Pet> save(Pet pet);
 
-    void deleteByUsername(String username);
+    void deleteById(String pet_id);
 
 }
 
